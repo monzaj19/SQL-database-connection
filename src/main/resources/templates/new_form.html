@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:form="">
+<head>
+    <meta charset="utf-8"/>
+    <title>New Employee</title>
+    <link rel="shortcut icon" href="../static/css/icon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="/static/css/style-form.css" th:href="@{static/css/style-form.css}"/>
+</head>
+<body>
+<div class="container-new-form">
+    <h1>Enter new Employee</h1>
+    <div class="list-form">
+        <ul>
+            <form action="/" th:action="@{/save}" th:object="${employee}"
+                  method="post">
+
+                <li>
+                    <label form:for="fid">Employee id:</label>
+                    <br>
+                    <input type="text" th:field="*{employee_id}"/>
+                </li>
+
+                <li>
+                    <label form:for="fname">Employee first name:</label>
+                    <br>
+                    <input type="text" th:field="*{first_name}"/>
+                </li>
+
+                <li>
+                    <label form:for="flastName">Employee last name:</label>
+                    <br>
+                    <input type="text" th:field="*{last_name}"/>
+                </li>
+
+                <li>
+                    <label form:for="femail">Employee email:</label>
+                    <br>
+                    <input type="text" th:field="*{email}"/>
+                </li>
+
+                <li>
+                    <label form:for="fphone">Employee phone number:</label>
+                    <br>
+                    <input type="text" th:field="*{phone_number}"/>
+                </li>
+
+                <li>
+                    <label form:for="fdate">Employee hire date:</label>
+                    <br>
+                    <input type="text" placeholder="YY/MM/DD" th:field="*{hire_date}"/>
+                </li>
+
+                <li>
+                    <label form:for="fjob">Employee job id:</label>
+                    <br>
+                    <select name="job_id">
+                        <option value="AD_PRES">AD_PRES</option>
+                        <option value="AD_VP">AD_VP</option>
+                        <option value="IT_PROG">IT_PROG</option>
+                        <option value="ST_MAN">ST_MAN</option>
+                        <option value="ST_CLERK">ST_CLERK</option>
+                        <option value="SA_MAN">SA_MAN</option>
+                        <option value="SA_REP">SA_REP</option>
+                        <option value="AD_ASST">AD_ASST</option>
+                        <option value="MK_MAN">MK_MAN</option>
+                        <option value="MK_REP">MK_REP</option>
+                        <option value="AC_MGR">AC_MGR</option>
+                        <option value="AC_ACCOUNT">AC_ACCOUNT</option>
+                    </select>
+                </li>
+
+                <li>
+                    <label form:for="fsalary">Employee salary:</label>
+                    <br>
+                    <input type="text" placeholder="0.0" th:field="*{salary}"/>
+                </li>
+
+                <li>
+                    <label form:for="fcommission">Employee commission pct:</label>
+                    <br>
+                    <input type="text" placeholder="0.0" th:field="*{commission_pct}"/>
+                </li>
+
+                <li>
+                    <label form:for="fmanager">Employee manager id:</label>
+                    <br>
+                    <select name="manager_id">
+                        <option value="100">100</option>
+                        <option value="101">101</option>
+                        <option value="101">102</option>
+                        <option value="103">103</option>
+                        <option value="124">124</option>
+                        <option value="149">149</option>
+                        <option value="201">201</option>
+                        <option value="205">205</option>
+                        <option value="null">null</option>
+                    </select>
+                </li>
+
+                <li>
+                    <label form:for="fdepartment">Employee department id:</label>
+                    <br>
+                    <select name="department_id">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="110">110</option>
+                        <option value="null">null</option>
+                    </select>
+                </li>
+
+                <li>
+                    <input type="submit" value="ADD">
+                </li>
+
+            </form>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

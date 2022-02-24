@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Employees Application</title>
+    <link rel="shortcut icon" href="../static/css/icon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="/static/css/style.css" th:href="@{static/css/style.css}"/>
+</head>
+<body>
+<div class="container-employees">
+    <div>
+        <img src="https://img.icons8.com/ios-filled/50/000000/home.png"/>
+        <a class="main-page" href="/">Main Page</a>
+    </div>
+    <h1>Employees List</h1>
+    <br/><br/>
+    <table>
+        <tr class="header-column">
+            <th>Employee ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th class="column-width">Hire Date</th>
+            <th>Job ID</th>
+            <th>Salary</th>
+            <th>Commission PCT</th>
+            <th>Manager ID</th>
+            <th>Department ID</th>
+            <th>Actions</th>
+        </tr>
+        <tbody>
+        <tr th:each="employee: ${employeeList}">
+            <td th:text="${employee.employee_id}"/>
+            <td th:text="${employee.first_name}"/>
+            <td th:text="${employee.last_name}"/>
+            <td th:text="${employee.email}"/>
+            <td th:text="${employee.phone_number}"/>
+            <td th:text="${employee.hire_date}"/>
+            <td th:text="${employee.job_id}"/>
+            <td th:text="${employee.salary}"/>
+            <td th:text="${employee.commission_pct}"/>
+            <td th:text="${employee.manager_id}"/>
+            <td th:text="${employee.department_id}"/>
+            <td>
+                <a class="edit-button" th:href="@{/edit/{employee_id}(employee_id=${employee.employee_id})}">Edit</a>
+                <a class="delete-button" th:href="@{/delete/{employee_id}(employee_id=${employee.employee_id})}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

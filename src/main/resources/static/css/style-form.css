@@ -1,0 +1,62 @@
+body {
+    background-image: url("office.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.95;
+    z-index: -1;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+}
+
+.container-new-form{
+    box-shadow: 0 0 20px gray;
+    width: 98%;
+    background-color: aliceblue;
+    margin: 10px auto 0;
+    text-align: center;
+    border-radius: 20px;
+    padding-bottom: 30px;
+}
+
+.container-new-form ul{
+    list-style: none;
+}
+
+.list-form{
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.container-new-form ul li input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.container-new-form ul li input[type=submit] {
+    width: 100%;
+    background-color: darkseagreen;
+    color: white;
+    font-size: 16px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container-new-form ul li input[type=submit]:hover {
+    background-color: #45a049;
+}
